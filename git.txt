@@ -17,3 +17,5 @@ nothing to commit (create/copy files and use "git add" to track)
 C:\Users\papmohapatra\Downloads\StudyMaterial\studyMaterial>git add .
 
 C:\Users\papmohapatra\Downloads\StudyMaterial\studyMaterial>git commit -m "First commit "
+
+>>git push
