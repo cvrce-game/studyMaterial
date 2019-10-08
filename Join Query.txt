@@ -1,0 +1,41 @@
+Select *from Course;
+---------------------------------------------------------------
+CriteriaBuilder cb=em.createCriteria();
+CriteriaQuery<Course> cq=cb.createQuery(Course.class);
+Root<Course> courseRoot=cq.from(Course.class);
+TypedQury<Course> query=em.createQuery(cq.select(courseRoot));
+List<COurse> resultSet=query.getResultList();
+syso(resultSet);
+
+Select *from Course where name like '100% steps';
+----------------------------------------------------------------
+
+CriteriaBuilder cb=em.createCriteria();
+CriteriaQuery<Course> cq=cb.createQuery(Course.class);
+Root<Course> courseRoot=cq.from(Course.class);
+
+Predicate like100Steps =cb.like(courseRoot.get(name),'100% steps'); 
+cq.where(like100Steps);
+
+TypedQury<Course> query=em.createQuery(cq.select(courseRoot));
+List<COurse> resultSet=query.getResultList();
+syso(resultSet);
+
+Select *from Course where Students is empty
+-----------------------------------------------------------------
+
+CriteriaBuilder cb=em.createCriteria();
+CriteriaQuery<Course> cq=cb.createQuery(Course.class);
+Root<Course> courseRoot=cq.from(Course.class);
+
+Predicate emptyStudent =cb.isEmpty(courseRoot.get("student")); 
+cq.where(emptyStudent); 
+
+TypedQury<Course> query=em.createQuery(cq.select(courseRoot));
+List<COurse> resultSet=query.getResultList();
+syso(resultSet);
+
+join
+-------------------------------------------------------------------
+
+Join<Object,Object> join =courseRoot.join("student")

@@ -1,0 +1,47 @@
+Criteria API
+-------------
+Select *from Course;
+
+1.Use Criteria Builder to create a criteria query returning the expected Object
+
+CriteriaBuilder cb=em.createCriteria();
+CriteriaQuery<Course> cq=cb.createQuery(Course.class);
+
+2.Define the Roots for tables which are involed in the table.
+
+Root<Course> courseRoot=cq.from(Course.class);
+
+
+3.Define Predicates  etc using criteria builder
+4.Add predicated ti criteria query.
+
+5.Build the TypedQury using entity mannager and createQuery
+
+TypedQury<Course> query=em.createQuery(cq.select(courseRoot));
+
+List<COurse> resultSet=query.getResultList();
+syso(resultSet);
+
+
+Select *from Course where name like '100% steps';
+
+3.Define Predicates  etc using criteria builder
+Predicate like100Steps =cb.like(courseRoot.get(name),'100% steps'); 
+
+4.Add predicated ti criteria query.
+cq.where(like100Steps);
+
+Select *from Course where Students is empty
+
+Predicate emptyStudent =cb.isEmpty(courseRoot.get("student")); 
+cq.where(emptyStudent); 
+
+join
+-------------------------------------------------------------------
+
+Join<Object,Object> join =courseRoot.join("student")
+
+Left Join
+--------------------------------------------------------------------
+
+Join<Object,Object> join =courseRoot.join("student", joinType.LEFT)
