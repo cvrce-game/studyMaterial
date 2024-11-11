@@ -1,0 +1,51 @@
+Basic Concepts
+---------------
+What is Stream API in Java?
+How do you create a stream from a collection?
+What is the difference between a sequential and parallel stream?
+Explain intermediate and terminal operations in Stream API.
+What are the common intermediate operations in Stream API?
+What are the common terminal operations in Stream API?
+How do you sort elements in a stream?
+How do you filter elements in a stream?
+How do you map elements in a stream?
+How do you reduce elements in a stream?
+
+Intermediate Concepts
+---------------------
+Explain the difference between filter() and distinct().
+How do you find the maximum and minimum element in a stream?
+How do you collect elements from a stream into a list or set?
+Explain the difference between forEach() and forEachOrdered().
+How do you limit the number of elements in a stream?
+How do you skip a certain number of elements in a stream?
+How do you concatenate multiple streams?
+Explain the difference between flatMap() and map().
+How do you group elements in a stream?
+How do you partition elements in a stream?
+
+Advanced Concepts
+------------------
+How do you perform custom sorting in a stream?
+How do you write custom collectors?
+Explain the concept of lazy evaluation in Stream API.
+How do you handle exceptions in Stream API?
+Explain the difference between findFirst() and findAny().
+How do you create infinite streams?
+How do you use peek() operation in Stream API?
+How do you perform parallel stream operations efficiently?
+How do you measure the performance of stream operations?
+Explain the concept of short-circuiting operations in Stream API.
+
+Practical Questions
+--------------------
+Given a list of numbers, find the sum of all even numbers.
+Given a list of strings, find the longest string.
+Given a list of integers, find the frequency of each number.
+Given a list of strings, group the strings by their first letter.
+Given a list of transactions, find the total amount spent by each customer.
+Given a list of employees, find the average salary of male and female employees.
+Given a list of words, find all anagrams.
+Given a list of numbers, find the first non-repeating number.
+Given a list of strings, sort them by length and then alphabetically.
+Given a list of integers, find the second largest number.
